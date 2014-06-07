@@ -1,0 +1,7 @@
+.buttons {
+  margin-top: 1em; }
+  .buttons button {
+    padding: 1em;
+    margin-right: 1em;
+    border-radius: 10px;
+    cursor: pointer; }
