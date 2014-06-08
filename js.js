@@ -3,9 +3,11 @@
  */
 
 
+
+
     var module = (function(){
 
-    var images = ["img1", "img2", "img3", "img4"],
+    var images = ["img1", "img2", "img3", "img4", "img5"],
         niz1 = [],
         r = $(".images"),
         niz2 = [],
@@ -16,6 +18,17 @@
 
         return {
 
+            nextImageFunc : function(){
+                imgNum = imgNum + 1;
+
+                if (imgNum > niz2 - 1){
+                    imgNum = 0;
+                }
+
+                if (imgNum === niz2.length){
+                    imgNum = 0;
+                }
+            },
 
             createImgNames : function(){
                 images.forEach(function(value){
@@ -40,18 +53,9 @@
 
             nextImg : function(){
                 $(".next").on("click", function(){
+                    module.nextImageFunc();
+                    $(r).html(niz2[imgNum]);
 
-                    imgNum = imgNum + 1;
-
-                    if (imgNum > niz2 - 1){
-                        imgNum = 0;
-                    }
-
-                    if (imgNum === niz2.length){
-                        imgNum = 0;
-                    }
-
-                    $(".images").html(niz2[imgNum]);
                 });
             },
 
@@ -69,6 +73,12 @@
                     $(r).html(niz2[imgNum]);
                     console.log(niz2[imgNum]);
                 });
+            },
+
+            imageSlideshow : function(){
+                module.nextImageFunc();
+                $(r).html(niz2[imgNum]);
+                setInterval(this.imageSlideshow, 3000);
             }
         };
     })();
@@ -77,12 +87,11 @@
     module.createImgElement();
     module.nextImg();
     module.prevImg();
-
-
+    module.imageSlideshow();
 
 /*
 
-// First version
+
 var images = ["img1", "img2", "img3", "img4"];
 
 
