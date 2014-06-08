@@ -1,3 +1,13 @@
+@mixin center(){
+    width: 960px;
+    margin: 0 auto;
+}
+
+body{
+  @include center;
+}
+
+
 .buttons{
   margin-top: 1em;
   button{
