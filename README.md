@@ -9,7 +9,7 @@ Just a skeleton code for Javascript Image Slider.
 
   <ul>
     <li>Rewrite in OOP ✓ Re-written with Module Design Pattern </li>
-    <li>Slideshow</li>
+    <li>Slideshow ✓</li>
     <li>Animations when changing image with pure JS</li>
     <li>Radio box for every image</li>
     <li>Make them responsive</li>
