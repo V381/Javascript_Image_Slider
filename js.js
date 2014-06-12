@@ -4,10 +4,11 @@
 
 
 
-
+    // Create module pattern
     var module = (function(){
 
-    var images = ["img1", "img2", "img3", "img4", "img5"],
+    // Create array to store images
+    var images = ["simg1", "img2", "img3", "img4", "img5"],
         niz1 = [],
         r = $(".images"),
         niz2 = [],
@@ -29,7 +30,9 @@
                     imgNum = 0;
                 }
             },
-
+            
+        // Create image path and push into niz1
+        
             createImgNames : function(){
                 images.forEach(function(value){
                     return niz1.push({
@@ -39,6 +42,7 @@
                 });
             },
 
+        // For each image create attribute
             createImgElement : function(){
                 for (var i = 0; i < niz1.length; i++){
                     var createImgs = document.createElement("img");
@@ -48,9 +52,10 @@
                     createImgs.setAttribute("alt", niz1[i].alt);
                     niz2.push(createImgs);
                 }
-                $(".images").append(niz2[0]);
+                $(".images").append(niz2[0]); // Append default picture to the dom [0]
             },
 
+        // Onclick next button call nextImagefunct, and iterate through pictures ++1
             nextImg : function(){
                 $(".next").on("click", function(){
                     module.nextImageFunc();
@@ -58,7 +63,9 @@
 
                 });
             },
-
+    
+        // Same as above, only --
+    
             prevImg : function(){
                 $(".prev").on("click", function(){
                     imgNum = imgNum - 1;
@@ -74,6 +81,8 @@
                     console.log(niz2[imgNum]);
                 });
             },
+
+    // After 3 seconds change picture, by using setInterval function
 
             imageSlideshow : function(){
                 module.nextImageFunc();
