@@ -2,14 +2,7 @@
  * Created by JS on 6/7/14.
  */
 
-var images1 = ["img1", "img2", "img3", "img4", "img5"];
-    var niz2 = [];
-images1.forEach(function(v){
-    niz2.push({
-        img : "img/" + v + ".jpg",
-        alt : "img"
-    });
-});
+
 
 
     // Create module pattern
