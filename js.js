@@ -2,6 +2,14 @@
  * Created by JS on 6/7/14.
  */
 
+var images1 = ["img1", "img2", "img3", "img4", "img5"];
+    var niz2 = [];
+images1.forEach(function(v){
+    niz2.push({
+        img : "img/" + v + ".jpg",
+        alt : "img"
+    });
+});
 
 
     // Create module pattern
@@ -13,7 +21,8 @@
         r = $(".images"),
         niz2 = [],
         imgNum = 0,
-        imgLength = niz2.length - 1;
+        imageText = ["test1", "bla2", "blbla3", "neki tekst", "sss"],
+        radio = document.createElement("radio");
 
 
 
@@ -59,8 +68,8 @@
             nextImg : function(){
                 $(".next").on("click", function(){
                     module.nextImageFunc();
+                    $(".text").html("<p>" + imageText[imgNum]);
                     $(r).html(niz2[imgNum]);
-
                 });
             },
     
@@ -78,6 +87,7 @@
                     }
 
                     $(r).html(niz2[imgNum]);
+                    $(".text").html("<p>" + imageText[imgNum]);
                     console.log(niz2[imgNum]);
                 });
             },
@@ -86,8 +96,15 @@
 
             imageSlideshow : function(){
                 module.nextImageFunc();
+
                 $(r).html(niz2[imgNum]);
+
+
+                $(".text").html("<p>" + imageText[imgNum]);
                 setInterval(this.imageSlideshow, 3000);
+            },
+
+            createText : function(){
             }
         };
     })();
@@ -97,6 +114,7 @@
     module.nextImg();
     module.prevImg();
     module.imageSlideshow();
+    module.createText();
 
 /*
 
