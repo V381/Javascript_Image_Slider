@@ -14,7 +14,7 @@
         r = $(".images"),
         niz2 = [],
         imgNum = 0,
-        imageText = ["test1", "bla2", "blbla3", "neki tekst", "sss"],
+        imageText = ["This is some text", "This is another text", "Text", "Some text", "Text1"],
         radio = document.createElement("radio");
 
 
