@@ -1,7 +1,7 @@
 Javascript_Image_Slider
 =======================
 
-Javascript Image Slider V 0.1
+Javascript Image Slider
 
 Just a skeleton code for Javascript Image Slider. 
 
