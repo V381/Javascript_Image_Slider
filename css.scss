@@ -1,20 +1,58 @@
-@mixin center(){
-    width: 960px;
-    margin: 0 auto;
+$bg1 : #275aff;
+$bg2 : #e1e1e6;
+
+@mixin reset(){
+    margin: 0;
+    padding: 0;
+
 }
 
-body{
-  @include center;
+*{
+  @include reset;
 }
 
+.header{
+  background-color: $bg1;
+  width: 100%;
+  height: 50px;
+  h1{
+    color: $bg2;
+    text-align: center;
+  }
+}
 
 .buttons{
   margin-top: 1em;
+  text-align: center;
   button{
     padding: 1em;
-    margin-right: 1em;
-    border-radius: 10px;
+    border-radius: 16px;
+    background-color: $bg1;
+    color: $bg2;
     cursor: pointer;
+    height: 50px;
+    width: 50px;
   }
+}
+
+
+
+.imgwrap{
+  width: 1100px;
+  margin: 20px auto;
+  position: relative;
+  p{
+    position: absolute;
+    top: 600px;
+    color: #f8f8ff;
+    background: #101010;
+    opacity: 0.7;
+    font-size: 40px;
+  }
+}
+
+img{
+  width: 1130px;
+  height: 700px;
 }
 
