@@ -9,13 +9,14 @@
     var module = (function(){
 
     // Create array to store images
-    var images = ["img1", "img2", "img3", "img4", "img5"],
-        niz1 = [],
-        r = $(".images"),
-        niz2 = [],
-        imgNum = 0,
-        imageText = ["This is some text", "This is another text", "Text", "Some text", "Text1"],
-        radio = document.createElement("radio");
+        var images = ["img1", "img2", "img3", "img4", "img5"],
+            niz1 = [],
+            r = $(".images"),
+            niz2 = [],
+            imgNum = 0,
+            imageText = ["This is some text", "This is another text", "Text", "Some text", "Text1"],
+            radio = document.createElement("radio"),
+            input = $(".inputs").find("input");
 
 
 
@@ -63,6 +64,7 @@
                     module.nextImageFunc();
                     $(".text").html("<p>" + imageText[imgNum]);
                     $(r).html(niz2[imgNum]);
+                    module.radioBoxImg();
                 });
             },
     
@@ -81,6 +83,7 @@
 
                     $(r).html(niz2[imgNum]);
                     $(".text").html("<p>" + imageText[imgNum]);
+                    module.radioBoxImg();
                     console.log(niz2[imgNum]);
                 });
             },
@@ -89,15 +92,18 @@
 
             imageSlideshow : function(){
                 module.nextImageFunc();
-
+                module.radioBoxImg();
                 $(r).html(niz2[imgNum]);
-
-
                 $(".text").html("<p>" + imageText[imgNum]);
                 setInterval(this.imageSlideshow, 3000);
             },
 
-            createText : function(){
+            radioBoxImg: function () {
+                $('input:radio:checked').each(function() {
+                    if($(this).is(':checked')) {
+                        $('input').val([imgNum]);
+                    }
+                });
             }
         };
     })();
@@ -107,8 +113,7 @@
     module.nextImg();
     module.prevImg();
     module.imageSlideshow();
-    module.createText();
-
+    module.radioBoxImg();
 /*
 
 
