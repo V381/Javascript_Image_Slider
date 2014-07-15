@@ -78,7 +78,7 @@
                         imgNum = 0;
                     }
                     if (imgNum < 0){
-                        imgNum = niz2.length- 1;
+                        imgNum = niz2.length - 1;
                     }
 
                     $(r).html(niz2[imgNum]);
@@ -98,13 +98,46 @@
                 setInterval(this.imageSlideshow, 3000);
             },
 
-            radioBoxImg: function () {
+            radioBoxImg : function () {
                 $('input:radio:checked').each(function() {
                     if($(this).is(':checked')) {
                         $('input').val([imgNum]);
                     }
                 });
+            },
+
+            radioOnClick : function(){
+                var input = $("input"),
+                    text = $(".text");
+                input.on("click", function(){
+
+                    switch (this){
+                        case input[0] :
+                            $(r).html(niz2[0]);
+                            text.html("<p>" + imageText[0]);
+                            break;
+                        case input[1] :
+                            $(r).html(niz2[1]);
+                            text.html("<p>" + imageText[1]);
+                            break;
+                        case input[2] :
+                            $(r).html(niz2[2]);
+                            text.html("<p>" + imageText[2]);
+                            break;
+                        case input[3] :
+                            $(r).html(niz2[3]);
+                            text.html("<p>" + imageText[3]);
+                            break;
+                        case input[4] :
+                            $(r).html(niz2[4]);
+                            text.html("<p>" + imageText[4]);
+                            break;
+                        default :
+                            console.log("Hi there!");
+                    }
+                })
             }
+
         };
     })();
 
@@ -114,7 +147,15 @@
     module.prevImg();
     module.imageSlideshow();
     module.radioBoxImg();
+    module.radioOnClick();
+
+
+
+
 /*
+
+
+
 
 
 var images = ["img1", "img2", "img3", "img4"];
