@@ -15,6 +15,7 @@ Just a skeleton code for Javascript Image Slider.
     <li>Make them responsive</li>
     <li>Add custom text to each image ✓ </li>
     <li>Better design ✓ </li>
+    <li>Rewrite with CoffeScript</li>
   </ul>
 
 
