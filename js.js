@@ -102,6 +102,7 @@
                 $('input:radio:checked').each(function() {
                     if($(this).is(':checked')) {
                         $('input').val([imgNum]);
+
                     }
                 });
             },
@@ -110,32 +111,39 @@
                 var input = $("input"),
                     text = $(".text");
                 input.on("click", function(){
-
                     switch (this){
                         case input[0] :
                             $(r).html(niz2[0]);
                             text.html("<p>" + imageText[0]);
+                            module.nextImageFunc();
                             break;
                         case input[1] :
                             $(r).html(niz2[1]);
                             text.html("<p>" + imageText[1]);
+                            module.nextImageFunc();
                             break;
                         case input[2] :
                             $(r).html(niz2[2]);
                             text.html("<p>" + imageText[2]);
+                            module.nextImageFunc();
                             break;
                         case input[3] :
                             $(r).html(niz2[3]);
                             text.html("<p>" + imageText[3]);
+                            module.nextImageFunc();
                             break;
                         case input[4] :
                             $(r).html(niz2[4]);
                             text.html("<p>" + imageText[4]);
+                            module.nextImageFunc();
                             break;
                         default :
                             console.log("Hi there!");
                     }
                 })
+            },
+
+            animation : function(){
             }
 
         };
@@ -148,68 +156,4 @@
     module.imageSlideshow();
     module.radioBoxImg();
     module.radioOnClick();
-
-
-
-
-/*
-
-
-
-
-
-var images = ["img1", "img2", "img3", "img4"];
-
-
-var niz1 = [];
-images.forEach(function(value){
-    return niz1.push({
-        img : "img/" + value + ".jpg",
-        alt : "img"
-    })
-});
-
-var r = document.querySelector("images");
-var niz2 = [];
-for (var i = 0; i < niz1.length; i++){
-    var createImgs = document.createElement("img");
-    createImgs.src = niz1[i].img;
-    createImgs.setAttribute("height", "400");
-    createImgs.setAttribute("width", "500");
-    createImgs.setAttribute("alt", niz1[i].alt);
-    niz2.push(createImgs);
-}
-
-var imgNum = 0;
-var imgLength = niz2.length - 1;
-$(".images").html(niz2[imgNum]);
-$(".next").on("click", function(){
-
-    imgNum = imgNum + 1;
-
-    if (imgNum > imgLength){
-        imgNum = 0;
-    }
-
-    if (imgNum < 0){
-        imgNum = imgLength;
-    }
-
-    $(".images").html(niz2[imgNum]);
-
-});
-
-$(".prev").on("click", function(){
-    imgNum = imgNum - 1;
-
-    if (imgNum > imgLength){
-        imgNum = 0;
-    }
-
-    if (imgNum < 0){
-        imgNum = imgLength;
-    }
-
-    $(".images").html(niz2[imgNum]);
-});
-*/
+    module.animation();
