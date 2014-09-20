@@ -136,11 +136,12 @@ module = (->
 
   animation: ->
 )()
-module.createImgNames()
-module.createImgElement()
-module.nextImg()
-module.prevImg()
-module.imageSlideshow()
-module.radioBoxImg()
-module.radioOnClick()
-module.animation()
+modd = () ->
+  module.createImgNames()
+  module.createImgElement()
+  module.nextImg()
+  module.prevImg()
+  module.imageSlideshow()
+  module.radioBoxImg()
+  module.radioOnClick()
+  module.animation()  
