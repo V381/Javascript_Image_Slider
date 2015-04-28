@@ -3,12 +3,15 @@
   padding: 0; }
 
 .header {
-  background-color: #275aff;
-  width: 100%;
-  height: 50px; }
-  .header h1 {
-    color: #e1e1e6;
-    text-align: center; }
+  background: #191919;
+  padding: 20px;
+  box-shadow: 2px 2px 2px #464646; }
+  header h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #ffffff; }
+    header h1:first-letter {
+      color: red; }
 
 .buttons {
   margin-top: 1em;
