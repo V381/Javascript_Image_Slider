@@ -1,4 +1,4 @@
-$bg1 : #275aff;
+$bg1 : #191919;
 $bg2 : #e1e1e6;
 
 @mixin reset(){
@@ -12,14 +12,19 @@ $bg2 : #e1e1e6;
 }
 
 .header{
-  background-color: $bg1;
-  width: 100%;
-  height: 50px;
+  background: $bg1;
+  padding: 20px;
+  box-shadow: 2px 2px 2px #464646;
   h1{
-    color: $bg2;
+    font-size: 2.5em;
     text-align: center;
+    color: #ffffff;
+    &:first-letter{
+      color: red;
+    }
   }
 }
+
 
 .buttons{
   margin-top: 1em;
