@@ -6,11 +6,11 @@
   background: #191919;
   padding: 20px;
   box-shadow: 2px 2px 2px #464646; }
-  header h1 {
+  .header h1 {
     font-size: 2.5em;
     text-align: center;
     color: #ffffff; }
-    header h1:first-letter {
+    .header h1:first-letter {
       color: red; }
 
 .buttons {
@@ -19,7 +19,7 @@
   .buttons button {
     padding: 1em;
     border-radius: 16px;
-    background-color: #275aff;
+    background-color: #191919;
     color: #e1e1e6;
     cursor: pointer;
     height: 50px;
